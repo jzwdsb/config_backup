@@ -113,3 +113,16 @@ export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/lib:/usr/local/lib
 # alias for anaconda-navigator
 alias anaconda-navigator="nohup anaconda-navigator 2> /dev/null &"
 
+# add zsh-syntax-highlighting
+source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+# personal alias
+
+alias cp='cp -iv'
+alias mv='mv -iv'
+alias rm='rm -iv'
+alias rmdir='rmdir -v'
+alias ln='ln -v'
+alias chmod='chmod -c'
+alias chown='chown -c'
+alias mkdir='mkdir -v'
