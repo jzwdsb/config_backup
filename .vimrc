@@ -8,6 +8,7 @@ filetype off                  " required
 
 
  Plugin 'Valloric/YouCompleteMe'
+ Plugin 'Valloric/ycmd'
 
  Plugin 'plasticboy/vim-markdown'
 
