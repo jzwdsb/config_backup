@@ -127,4 +127,7 @@ alias chmod='chmod -c'
 alias chown='chown -c'
 alias mkdir='mkdir -v'
 
+alias checkupdate='sudo apt update && apt list --upgrade'
+
+
 #export VIMRUNTIME=/usr/share/vim/vim74
