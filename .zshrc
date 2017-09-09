@@ -127,7 +127,7 @@ alias chmod='chmod -c'
 alias chown='chown -c'
 alias mkdir='mkdir -v'
 
-alias checkupdate='sudo apt update && apt list --upgrade'
-
+alias checkupdate='sudo apt update && apt list --upgradable'
+alias removeAptLock='sudo rm -rf /var/cache/apt/archives/lock && sudo rm -rf /var/lib/apt/lists/* && sudo apt clean'
 
 #export VIMRUNTIME=/usr/share/vim/vim74
