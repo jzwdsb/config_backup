@@ -200,8 +200,9 @@ packadd matchit
 "ycm 的配置 "
 let g:ycm_global_ycm_extra_conf='/home/manout/.vim/bundle/YouCompleteMe/.ycm_extra_conf.py'
 let g:ycm_seed_identifiers_with_syntax=1  " c/c++关键字补全"
-
-
+let g:ycm_confirm_extra_conf=0	"关闭存在多个 ycm_extra_conf.py 时的确认提醒"
+let g:ycm_extra_conf_globlist = ['./', '~/.vim/bundle/YouCompleteMe/'] "ycm_extra_conf的搜寻路径"
+let g:ycm_auto_trigger = 1		"当输入 . 或 -> 自动弹出补全"
 
 "ensible.vim - Defaults everyone can agree on
 " Maintainer:   Tim Pope <http://tpo.pe/>
