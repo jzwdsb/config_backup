@@ -116,6 +116,9 @@ alias anaconda-navigator="nohup anaconda-navigator 2> /dev/null &"
 # add zsh-syntax-highlighting
 source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
+# add rust
+source $HOME/.cargo/env
+
 # personal alias
 
 alias cp='cp -iv'
@@ -129,5 +132,7 @@ alias mkdir='mkdir -v'
 
 alias checkupdate='sudo apt update && apt list --upgradable'
 alias removeAptLock='sudo rm -rf /var/cache/apt/archives/lock && sudo rm -rf /var/lib/apt/lists/* && sudo apt clean'
+
+alias cmatrix='cmatrix -b'
 
 #export VIMRUNTIME=/usr/share/vim/vim74
