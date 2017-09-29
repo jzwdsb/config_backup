@@ -112,7 +112,7 @@ export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/lib:/usr/local/lib
 
 # alias for anaconda-navigator
 alias anaconda-navigator="nohup anaconda-navigator 2> /dev/null &"
-alias ddd='ddd 2> /dev/null &'
+alias ddd='nohup  ddd 2> /dev/null &'
 
 # add zsh-syntax-highlighting
 source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
