@@ -95,6 +95,9 @@ export PATH=$PATH:/usr/local/cuda/bin/
 
 # add anaconda path
 export PATH=$PATH:/home/manout/anaconda3/bin
+
+#add /home/manout/bin
+export PATH=$PATH:/home/manout/bin
 # intel icc script path
 #export PATH=$PATH:/opt/intel/bin
 
@@ -117,7 +120,6 @@ source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source $HOME/.cargo/env
 
 # personal alias
-
 alias cp='cp -iv'
 alias mv='mv -iv'
 alias rm='rm -v'
