@@ -85,7 +85,6 @@ fi
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 export OPENCV_TEST_DATA_PATH=/home/manout/opencv_extra/testdata
 
-alias openfile=xdg-open
 eval $(thefuck --alias cao )
 
 #alias sudo="sudo env PATH=$PATH"
@@ -116,6 +115,9 @@ export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/lib:/usr/local/lib
 # add zsh-syntax-highlighting
 source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
+# add antlr classpath
+export CLASSPATH=$CLASSPATH:/usr/local/lib/antlr-4.7-complete.jar:.
+
 # add rust
 source $HOME/.cargo/env
 
@@ -128,13 +130,12 @@ alias ln='ln -v'
 alias chmod='chmod -c'
 alias chown='chown -c'
 alias mkdir='mkdir -v'
-
 alias checkupdate='sudo apt update && apt list --upgradable'
 alias removeAptLock='sudo rm -rf /var/cache/apt/archives/lock && sudo rm -rf /var/lib/apt/lists/* && sudo apt clean'
-
 alias cmatrix='cmatrix -b'
 alias anaconda-navigator="nohup anaconda-navigator 2> /dev/null &"
 alias ddd='nohup  ddd 2> /dev/null &'
+alias openfile=xdg-open
 
 # perf alias
 alias perf='sudo perf'
@@ -164,6 +165,8 @@ alias perf-top='sudo perf top'
 alias perf-probe='sudo perf probe'
 alias perf-trace='sudo perf trace'
 
-
+# alias for antlr
+alias antlr4='java -jar /usr/local/lib/antlr-4.7-complete.jar'
+alias grun='java org.antlr.v4.gui.TestRig'
 
 #export VIMRUNTIME=/usr/share/vim/vim74
