@@ -135,7 +135,12 @@ alias removeAptLock='sudo rm -rf /var/cache/apt/archives/lock && sudo rm -rf /va
 alias cmatrix='cmatrix -b'
 alias anaconda-navigator="nohup anaconda-navigator 2> /dev/null &"
 alias ddd='nohup  ddd 2> /dev/null &'
-alias openfile=xdg-open
+alias openfile='xdg-open'
+alias :q='echo "You are not in vim"'
+alias gephi='nohup  $HOME/gephi-0.9.3-SNAPSHOT/bin/gephi 2> /dev/null &'
+alias ipython='ipython --pylab'
+alias ipython3='ipython3 --pylab'
+alias shutdown='sudo /etc/init.d/docker stop && shutdown'
 
 # perf alias
 alias perf='sudo perf'
