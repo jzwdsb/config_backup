@@ -131,7 +131,7 @@ alias chmod='chmod -c'
 alias chown='chown -c'
 alias mkdir='mkdir -v'
 alias checkupdate='sudo apt update && apt list --upgradable'
-alias removeAptLock='sudo rm -rf /var/cache/apt/archives/lock && sudo rm -rf /var/lib/apt/lists/* && sudo apt clean'
+alias removeAptLock='sudo rm -rf /var/cache/apt/archives/lock && sudo rm -rf /var/lib/apt/lists/* && sudo rm -rf /var/lib/dpkg/lock &&  sudo apt clean'
 alias cmatrix='cmatrix -b'
 alias anaconda-navigator="nohup anaconda-navigator 2> /dev/null &"
 alias ddd='nohup  ddd 2> /dev/null &'
@@ -141,6 +141,7 @@ alias gephi='nohup  $HOME/gephi-0.9.3-SNAPSHOT/bin/gephi 2> /dev/null &'
 alias ipython='ipython --pylab'
 alias ipython3='ipython3 --pylab'
 alias shutdown='sudo /etc/init.d/docker stop && shutdown'
+alias arctime='cd ~/ARCTIME_1.2_LINUX; nohup arctime 2> /dev/null &; cd -'
 
 # perf alias
 alias perf='sudo perf'
