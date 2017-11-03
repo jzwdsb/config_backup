@@ -140,7 +140,6 @@ alias :q='echo "You are not in vim"'
 alias gephi='nohup  $HOME/gephi-0.9.3-SNAPSHOT/bin/gephi 2> /dev/null &'
 alias ipython='ipython --pylab'
 alias ipython3='ipython3 --pylab'
-alias shutdown='sudo /etc/init.d/docker stop && shutdown'
 alias arctime='cd ~/ARCTIME_1.2_LINUX; nohup arctime 2> /dev/null &; cd -'
 
 # perf alias
