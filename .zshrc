@@ -115,8 +115,16 @@ export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/lib:/usr/local/lib
 # add zsh-syntax-highlighting
 source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
+export JAVA_HOME=/usr/lib/jvm/java-8-oracle/jre
+
+export PATH=$PATH:$JAVA_HOME/bin
+
+export CLASSPATH=$CLASSPATH:.
+
 # add antlr classpath
-export CLASSPATH=$CLASSPATH:/usr/local/lib/antlr-4.7-complete.jar:.
+export CLASSPATH=$CLASSPATH:/usr/local/lib/antlr-4.7-complete.jar
+
+export CLASSPATH=$CLASSPATH:/usr/share/java
 
 # add rust
 source $HOME/.cargo/env
@@ -140,7 +148,6 @@ alias :q='echo "You are not in vim"'
 alias gephi='nohup  $HOME/gephi-0.9.3-SNAPSHOT/bin/gephi 2> /dev/null &'
 alias ipython='ipython --pylab'
 alias ipython3='ipython3 --pylab'
-alias arctime='cd ~/ARCTIME_1.2_LINUX; nohup arctime 2> /dev/null &; cd -'
 
 # perf alias
 alias perf='sudo perf'
