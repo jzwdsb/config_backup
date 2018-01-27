@@ -93,7 +93,7 @@ eval $(thefuck --alias cao )
 export PATH=$PATH:/usr/local/cuda/bin/
 
 # add anaconda path
-export PATH=$PATH:/home/manout/anaconda3/bin
+#export PATH=$PATH:/home/manout/anaconda3/bin
 
 #add /home/manout/bin
 export PATH=$PATH:/home/manout/bin
@@ -139,9 +139,8 @@ alias chmod='chmod -c'
 alias chown='chown -c'
 alias mkdir='mkdir -v'
 alias checkupdate='sudo apt update && apt list --upgradable'
-alias removeAptLock='sudo rm -rf /var/cache/apt/archives/lock && sudo rm -rf /var/lib/apt/lists/lock && sudo rm -rf /var/lib/dpkg/lock &&  sudo apt clean'
 alias cmatrix='cmatrix -b'
-alias anaconda-navigator="nohup anaconda-navigator 2> /dev/null &"
+#alias anaconda-navigator="nohup anaconda-navigator 2> /dev/null &"
 alias ddd='nohup  ddd 2> /dev/null &'
 alias openfile='xdg-open'
 alias :q='echo "You are not in vim"'
