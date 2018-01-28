@@ -115,6 +115,9 @@ export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/lib:/usr/local/lib
 # add zsh-syntax-highlighting
 source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
+# add zsh plugin
+#source $ZSH/incr-0.2.zsh
+
 export JAVA_HOME=/usr/lib/jvm/java-8-oracle/jre
 
 export PATH=$PATH:$JAVA_HOME/bin
