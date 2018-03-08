@@ -96,7 +96,7 @@ export PATH=$PATH:/usr/local/cuda/bin/
 #export PATH=$PATH:/home/manout/anaconda3/bin
 
 #add /home/manout/bin
-export PATH=$PATH:/home/manout/bin
+#export PATH=$PATH:/home/manout/bin
 # intel icc script path
 #export PATH=$PATH:/opt/intel/bin
 
