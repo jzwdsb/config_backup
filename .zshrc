@@ -73,7 +73,7 @@ fi
 # export ARCHFLAGS="-arch x86_64"
 
 # ssh
-# export SSH_KEY_PATH="~/.ssh/rsa_id"
+export SSH_KEY_PATH="~/.ssh/rsa_id"
 
 # Set personal aliases, overriding those provided by oh-my-zsh libs,
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
@@ -93,7 +93,7 @@ eval $(thefuck --alias cao )
 export PATH=$PATH:/usr/local/cuda/bin/
 
 # add anaconda path
-#export PATH=$PATH:/home/manout/anaconda3/bin
+export PATH=$PATH:/home/manout/anaconda3/bin
 
 #add /home/manout/bin
 #export PATH=$PATH:/home/manout/bin
@@ -135,7 +135,7 @@ source $HOME/.cargo/env
 # personal alias
 alias cp='cp -iv'
 alias mv='mv -iv'
-alias rm='rm -v'
+#alias rm='rm -v'
 alias rmdir='rmdir -v'
 alias ln='ln -v'
 alias chmod='chmod -c'
@@ -150,6 +150,7 @@ alias :q='echo "You are not in vim"'
 alias gephi='nohup  $HOME/gephi-0.9.3-SNAPSHOT/bin/gephi 2> /dev/null &'
 alias ipython='ipython --pylab'
 alias ipython3='ipython3 --pylab'
+alias rm="trash-put -v"
 
 # perf alias
 alias perf='sudo perf'
