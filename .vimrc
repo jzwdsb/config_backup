@@ -78,6 +78,8 @@ set fileencoding=utf-8
 
 set softtabstop=4
 
+set shortmess=atI
+
 augroup project
 	autocmd!
 	autocmd BufRead, BufNewFile *.h, *.c set filetype=c.doxygen
