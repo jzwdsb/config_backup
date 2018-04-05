@@ -152,6 +152,7 @@ alias ipython='ipython --pylab'
 alias ipython3='ipython3 --pylab'
 alias rm="trash-put -v"
 alias add-apt-proxy="cat /home/manout/.aptproxy | sudo tee /etc/apt/apt.conf"
+alias gcc='g++'
 
 # perf alias
 alias perf='sudo perf'
