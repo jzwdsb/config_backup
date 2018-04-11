@@ -115,8 +115,15 @@ export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/lib:/usr/local/lib
 # add zsh-syntax-highlighting
 source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
+# add rust
+source $HOME/.cargo/env
+
 # add zsh plugin
 #source $ZSH/incr-0.2.zsh
+
+# add autojump
+source /usr/share/autojump/autojump.zsh
+
 
 export JAVA_HOME=/usr/lib/jvm/java-8-oracle/jre
 
@@ -128,9 +135,6 @@ export CLASSPATH=$CLASSPATH:.
 export CLASSPATH=$CLASSPATH:/usr/local/lib/antlr-4.7-complete.jar
 
 export CLASSPATH=$CLASSPATH:/usr/share/java
-
-# add rust
-source $HOME/.cargo/env
 
 # personal alias
 alias cp='cp -iv'
