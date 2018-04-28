@@ -157,6 +157,8 @@ alias ipython3='ipython3 --pylab'
 alias rm="trash-put -v"
 alias add-apt-proxy="cat /home/manout/.aptproxy | sudo tee /etc/apt/apt.conf"
 alias gcc='g++'
+alias blog_build='hexo clean && hexo g'
+alias blog_deploy='hexo clean && hexo g && hexo d'
 
 # perf alias
 alias perf='sudo perf'
@@ -191,3 +193,7 @@ alias antlr4='java -jar /usr/local/lib/antlr-4.7-complete.jar'
 alias grun='java org.antlr.v4.gui.TestRig'
 
 #export VIMRUNTIME=/usr/share/vim/vim74
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
