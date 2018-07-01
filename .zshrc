@@ -2,12 +2,13 @@
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-  export ZSH=/home/manout/.oh-my-zsh
+  export ZSH=/Users/manout/.oh-my-zsh
 
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
 ZSH_THEME="robbyrussell"
+#ZSH_THEME="pygmalion"
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -51,7 +52,7 @@ COMPLETION_WAITING_DOTS="true"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git)
+plugins=(git colored-man colorize pip python3 brew osx zsh-syntax-highlighting)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -60,7 +61,7 @@ source $ZSH/oh-my-zsh.sh
 # export MANPATH="/usr/local/man:$MANPATH"
 
 # You may need to manually set your language environment
- export LANG=en_US.UTF-8
+export LANG=zh_CN.UTF-8
 
 # Preferred editor for local and remote sessions
 if [[ -n $SSH_CONNECTION ]]; then
@@ -90,15 +91,16 @@ eval $(thefuck --alias cao )
 #alias sudo="sudo env PATH=$PATH"
 
 # add cuda nvcc path
-export PATH=$PATH:/usr/local/cuda/bin/
+#export PATH=$PATH:/usr/local/cuda/bin/
 
 # add anaconda path
-export PATH=$PATH:/home/manout/anaconda3/bin
+#export PATH=$PATH:/home/manout/anaconda3/bin
 
 #add /home/manout/bin
 #export PATH=$PATH:/home/manout/bin
 # intel icc script path
 #export PATH=$PATH:/opt/intel/bin
+PATH=/usr/local/bin:$PATH
 
 
 export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/lib:/usr/local/lib
@@ -113,52 +115,53 @@ export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/lib:/usr/local/lib
 #export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/home/manout/anaconda3/lib
 
 # add zsh-syntax-highlighting
-source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 # add rust
-source $HOME/.cargo/env
+#source $HOME/.cargo/env
 
 # add zsh plugin
 #source $ZSH/incr-0.2.zsh
 
 # add autojump
-source /usr/share/autojump/autojump.zsh
+source /usr/local/Cellar/autojump/22.5.1/share/autojump/autojump.zsh
 
 
-export JAVA_HOME=/usr/lib/jvm/java-8-oracle/jre
+#export JAVA_HOME=/usr/lib/jvm/java-8-oracle/jre
 
-export PATH=$PATH:$JAVA_HOME/bin
+#export PATH=$PATH:$JAVA_HOME/bin
 
-export CLASSPATH=$CLASSPATH:.
+#export CLASSPATH=$CLASSPATH:.
 
 # add antlr classpath
-export CLASSPATH=$CLASSPATH:/usr/local/lib/antlr-4.7-complete.jar
+#export CLASSPATH=$CLASSPATH:/usr/local/lib/antlr-4.7-complete.jar
 
-export CLASSPATH=$CLASSPATH:/usr/share/java
+#export CLASSPATH=$CLASSPATH:/usr/share/java
 
 # personal alias
 alias cp='cp -iv'
 alias mv='mv -iv'
-#alias rm='rm -v'
+alias rm='rm -v'
 alias rmdir='rmdir -v'
 alias ln='ln -v'
 alias chmod='chmod -c'
 alias chown='chown -c'
 alias mkdir='mkdir -v'
-alias checkupdate='sudo apt update && apt list --upgradable'
+#alias checkupdate='sudo apt update && apt list --upgradable'
 alias cmatrix='cmatrix -b'
 #alias anaconda-navigator="nohup anaconda-navigator 2> /dev/null &"
-alias ddd='nohup  ddd 2> /dev/null &'
-alias openfile='xdg-open'
+#alias ddd='nohup  ddd 2> /dev/null &'
+#alias openfile='xdg-open'
 alias :q='echo "You are not in vim"'
-alias gephi='nohup  $HOME/gephi-0.9.3-SNAPSHOT/bin/gephi 2> /dev/null &'
+#alias gephi='nohup  $HOME/gephi-0.9.3-SNAPSHOT/bin/gephi 2> /dev/null &'
 alias ipython='ipython --pylab'
 alias ipython3='ipython3 --pylab'
-alias rm="trash-put -v"
-alias add-apt-proxy="cat /home/manout/.aptproxy | sudo tee /etc/apt/apt.conf"
+#alias rm="trash-put -v"
+#alias add-apt-proxy="cat /home/manout/.aptproxy | sudo tee /etc/apt/apt.conf"
 alias gcc='g++'
 alias blog_build='hexo clean && hexo g'
 alias blog_deploy='hexo clean && hexo g && hexo d'
+alias vim='mvim'
 
 # perf alias
 alias perf='sudo perf'
@@ -197,3 +200,7 @@ alias grun='java org.antlr.v4.gui.TestRig'
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+export PATH=$PATH:/Users/manout/android-ndk-r16b
+export ANDROID_NDK="/Users/manout/android-ndk-r16b"
