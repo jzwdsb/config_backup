@@ -144,7 +144,7 @@ alias mv='mv -iv'
 alias rm='rm -v'
 alias rmdir='rmdir -v'
 alias ln='ln -v'
-alias chmod='chmod -c'
+#alias chmod='chmod -c'
 alias chown='chown -c'
 alias mkdir='mkdir -v'
 #alias checkupdate='sudo apt update && apt list --upgradable'
@@ -162,6 +162,7 @@ alias gcc='g++'
 alias blog_build='hexo clean && hexo g'
 alias blog_deploy='hexo clean && hexo g && hexo d'
 alias vim='mvim'
+alias blog_commit="git add --all && git commit -m \"$(date)\" && git push origin master"
 
 # perf alias
 alias perf='sudo perf'
