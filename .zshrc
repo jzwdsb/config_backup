@@ -102,6 +102,7 @@ eval $(thefuck --alias cao )
 #export PATH=$PATH:/opt/intel/bin
 PATH=/usr/local/bin:$PATH
 
+export PATH="/usr/local/opt/python/libexec/bin:$PATH"
 
 export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/lib:/usr/local/lib
 # link mkl library, do not need now
@@ -141,7 +142,7 @@ source /usr/local/Cellar/autojump/22.5.1/share/autojump/autojump.zsh
 # personal alias
 alias cp='cp -iv'
 alias mv='mv -iv'
-alias rm='rm -v'
+alias rm='rm -vi'
 alias rmdir='rmdir -v'
 alias ln='ln -v'
 #alias chmod='chmod -c'
@@ -162,7 +163,8 @@ alias gcc='g++'
 alias blog_build='hexo clean && hexo g'
 alias blog_deploy='hexo clean && hexo g && hexo d'
 alias vim='mvim'
-alias blog_commit="git add --all && git commit -m \"$(date)\" && git push origin master"
+alias blog_commit='git add --all && git commit -m \"$(date)\" && git push origin master'
+alias updatedb='/usr/libexec/locate.updatedb'
 
 # perf alias
 alias perf='sudo perf'
@@ -205,3 +207,4 @@ export NVM_DIR="$HOME/.nvm"
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 export PATH=$PATH:/Users/manout/android-ndk-r16b
 export ANDROID_NDK="/Users/manout/android-ndk-r16b"
+VIRTUALENVWRAPPER_PYTHON=/usr/local/bin/python3
