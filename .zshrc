@@ -163,7 +163,7 @@ alias gcc='g++'
 alias blog_build='hexo clean && hexo g'
 alias blog_deploy='hexo clean && hexo g && hexo d'
 alias vim='mvim'
-alias blog_commit='git add --all && git commit -m \"$(date)\" && git push origin master'
+alias blog_commit='git add --all && git commit -m "$(date)" && git push origin master'
 alias updatedb='/usr/libexec/locate.updatedb'
 
 # perf alias
