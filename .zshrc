@@ -208,3 +208,4 @@ export NVM_DIR="$HOME/.nvm"
 export PATH=$PATH:/Users/manout/android-ndk-r16b
 export ANDROID_NDK="/Users/manout/android-ndk-r16b"
 VIRTUALENVWRAPPER_PYTHON=/usr/local/bin/python3
+export PATH="/usr/local/opt/sphinx-doc/bin:$PATH"
