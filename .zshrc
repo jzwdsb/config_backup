@@ -115,6 +115,9 @@ export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/lib:/usr/local/lib
 # after add /home/manout/anaconda3/lib to LD_LIBRARY_PATH, ssh reports a warning message when execute
 #export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/home/manout/anaconda3/lib
 
+# add caffe to python package search path
+export PYTHONPATH=$PYTHONPATH:/Users/manout/caffe/python
+
 # add zsh-syntax-highlighting
 source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
@@ -166,6 +169,8 @@ alias vim='mvim'
 alias blog_commit='git add --all && git commit -m "$(date)" && git push origin master'
 alias updatedb='/usr/libexec/locate.updatedb'
 
+#alias python3='/usr/local/bin/python'
+
 # perf alias
 alias perf='sudo perf'
 alias perf-annotate='sudo perf annotate'
@@ -195,8 +200,8 @@ alias perf-probe='sudo perf probe'
 alias perf-trace='sudo perf trace'
 
 # alias for antlr
-alias antlr4='java -jar /usr/local/lib/antlr-4.7-complete.jar'
-alias grun='java org.antlr.v4.gui.TestRig'
+#alias antlr4='java -jar /usr/local/lib/antlr-4.7-complete.jar'
+#alias grun='java org.antlr.v4.gui.TestRig'
 
 #export VIMRUNTIME=/usr/share/vim/vim74
 
@@ -205,7 +210,7 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-export PATH=$PATH:/Users/manout/android-ndk-r16b
-export ANDROID_NDK="/Users/manout/android-ndk-r16b"
+#export PATH=$PATH:/Users/manout/android-ndk-r16b
+#export ANDROID_NDK="/Users/manout/android-ndk-r16b"
 VIRTUALENVWRAPPER_PYTHON=/usr/local/bin/python3
 export PATH="/usr/local/opt/sphinx-doc/bin:$PATH"
