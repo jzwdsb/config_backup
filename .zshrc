@@ -171,39 +171,6 @@ alias updatedb='/usr/libexec/locate.updatedb'
 
 #alias python3='/usr/local/bin/python'
 
-# perf alias
-alias perf='sudo perf'
-alias perf-annotate='sudo perf annotate'
-alias perf-archive='sudo perf archive'
-alias perf-bench='sudo perf bench'
-alias perf-buildid-cache='sudo perf buildid-cache'
-alias perf-buildid-list='sudo perf buildid-list'
-alias perf-config='sudo perf config'
-alias perf-data='sudo perf data'
-alias perf-diff='sudo perf diff'
-alias perf-evlist='sudo perf evlist'
-alias perf-inject='sudo perf inject'
-alias perf-kmem='sudo perf kmem'
-alias perf-kvm='sudo perf kvm'
-alias perf-list='sudo perf list'
-alias perf-lock='sudo perf lock'
-alias perf-mem='sudo perf mem'
-alias perf-record='sudo perf record'
-alias perf-report='sudo perf report'
-alias perf-sched='sudo perf sched'
-alias perf-script='sudo perf script'
-alias perf-stat='sudo perf stat'
-alias perf-test='sudo perf test'
-alias perf-timechart='sudo perf timechart'
-alias perf-top='sudo perf top'
-alias perf-probe='sudo perf probe'
-alias perf-trace='sudo perf trace'
-
-# alias for antlr
-#alias antlr4='java -jar /usr/local/lib/antlr-4.7-complete.jar'
-#alias grun='java org.antlr.v4.gui.TestRig'
-
-#export VIMRUNTIME=/usr/share/vim/vim74
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
