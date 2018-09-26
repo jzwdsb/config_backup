@@ -89,34 +89,15 @@ eval $(thefuck --alias cao )
 
 #alias sudo="sudo env PATH=$PATH"
 
-# add cuda nvcc path
-export PATH=$PATH:/usr/local/cuda/bin/
 
-# add anaconda path
-export PATH=$PATH:/home/manout/anaconda3/bin
-
-#add /home/manout/bin
-#export PATH=$PATH:/home/manout/bin
-# intel icc script path
-#export PATH=$PATH:/opt/intel/bin
 
 
 export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/lib:/usr/local/lib
-# link mkl library, do not need now
-#export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/opt/intel/lib/intel64:/opt/intel/mkl/lib/intel64
 
-# after add /usr/libl/x86_64-linux-gnu to the LD_LIBRARY_PATH, anaconda-navigator crashs when every time start 
-#export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/lib/x86_64-linux-gnu
-
-
-# after add /home/manout/anaconda3/lib to LD_LIBRARY_PATH, ssh reports a warning message when execute
-#export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/home/manout/anaconda3/lib
 
 # add zsh-syntax-highlighting
 source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
-# add rust
-source $HOME/.cargo/env
 
 # add zsh plugin
 #source $ZSH/incr-0.2.zsh
@@ -131,15 +112,12 @@ export PATH=$PATH:$JAVA_HOME/bin
 
 export CLASSPATH=$CLASSPATH:.
 
-# add antlr classpath
-export CLASSPATH=$CLASSPATH:/usr/local/lib/antlr-4.7-complete.jar
-
 export CLASSPATH=$CLASSPATH:/usr/share/java
 
 # personal alias
 alias cp='cp -iv'
 alias mv='mv -iv'
-#alias rm='rm -v'
+alias rm='rm -v'
 alias rmdir='rmdir -v'
 alias ln='ln -v'
 alias chmod='chmod -c'
@@ -147,7 +125,6 @@ alias chown='chown -c'
 alias mkdir='mkdir -v'
 alias checkupdate='sudo apt update && apt list --upgradable'
 alias cmatrix='cmatrix -b'
-#alias anaconda-navigator="nohup anaconda-navigator 2> /dev/null &"
 alias ddd='nohup  ddd 2> /dev/null &'
 alias openfile='xdg-open'
 alias :q='echo "You are not in vim"'
@@ -155,45 +132,15 @@ alias gephi='nohup  $HOME/gephi-0.9.3-SNAPSHOT/bin/gephi 2> /dev/null &'
 alias ipython='ipython --pylab'
 alias ipython3='ipython3 --pylab'
 alias rm="trash-put -v"
-alias add-apt-proxy="cat /home/manout/.aptproxy | sudo tee /etc/apt/apt.conf"
 alias gcc='g++'
 alias blog_build='hexo clean && hexo g'
 alias blog_deploy='hexo clean && hexo g && hexo d'
 
-# perf alias
-alias perf='sudo perf'
-alias perf-annotate='sudo perf annotate'
-alias perf-archive='sudo perf archive'
-alias perf-bench='sudo perf bench'
-alias perf-buildid-cache='sudo perf buildid-cache'
-alias perf-buildid-list='sudo perf buildid-list'
-alias perf-config='sudo perf config'
-alias perf-data='sudo perf data'
-alias perf-diff='sudo perf diff'
-alias perf-evlist='sudo perf evlist'
-alias perf-inject='sudo perf inject'
-alias perf-kmem='sudo perf kmem'
-alias perf-kvm='sudo perf kvm'
-alias perf-list='sudo perf list'
-alias perf-lock='sudo perf lock'
-alias perf-mem='sudo perf mem'
-alias perf-record='sudo perf record'
-alias perf-report='sudo perf report'
-alias perf-sched='sudo perf sched'
-alias perf-script='sudo perf script'
-alias perf-stat='sudo perf stat'
-alias perf-test='sudo perf test'
-alias perf-timechart='sudo perf timechart'
-alias perf-top='sudo perf top'
-alias perf-probe='sudo perf probe'
-alias perf-trace='sudo perf trace'
 
-# alias for antlr
-alias antlr4='java -jar /usr/local/lib/antlr-4.7-complete.jar'
-alias grun='java org.antlr.v4.gui.TestRig'
+export VIMRUNTIME=/usr/share/vim/vim74
 
-#export VIMRUNTIME=/usr/share/vim/vim74
+export PATH=$PATH:/home/manout/.npm_modules/bin
 
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+#export NVM_DIR="$HOME/.nvm"
+#[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+#[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
