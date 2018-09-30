@@ -83,7 +83,6 @@ export SSH_KEY_PATH="~/.ssh/rsa_id"
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-export OPENCV_TEST_DATA_PATH=/home/manout/opencv_extra/testdata
 
 eval $(thefuck --alias cao )
 
@@ -135,12 +134,25 @@ alias rm="trash-put -v"
 alias gcc='g++'
 alias blog_build='hexo clean && hexo g'
 alias blog_deploy='hexo clean && hexo g && hexo d'
+alias blog_commit='git add --all && git commit -m "$(date)" && git push origin master'
 
 
 export VIMRUNTIME=/usr/share/vim/vim74
 
 export PATH=$PATH:/home/manout/.npm_modules/bin
 
+# add aarch64-linux-gcc
+export PATH=$PATH:/home/manout/mace/tools/aarch64_compiler/linaro_linux_gcc
+
+# add arm-linux-gcc
+export PATH=$PATH:/home/manout/mace/tools/arm_compiler/linaro_linux_gcc
+
 #export NVM_DIR="$HOME/.nvm"
 #[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 #[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+export ANDROID_NDK=/home/manout/android-ndk-r16b
+export ANDROID_NDK_HOME=$ANDROID_NDK
+export PATH=$PATH:/snap/bin
+export PATH=$PATH:$ANDROID_NDK
+
