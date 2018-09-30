@@ -147,12 +147,19 @@ export PATH=$PATH:/home/manout/mace/tools/aarch64_compiler/linaro_linux_gcc
 # add arm-linux-gcc
 export PATH=$PATH:/home/manout/mace/tools/arm_compiler/linaro_linux_gcc
 
+# add snap/bin to PATH
+export PATH=$PATH:/snap/bin
+
+# add ANDROID_NDK to PATH
+export PATH=$PATH:$ANDROID_NDK
+
+# add pycaffe to PYTHONPATH
+export PYTHONPATH=$PYTHONPATH:/home/manout/caffe/pytho/n
+
 #export NVM_DIR="$HOME/.nvm"
 #[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 #[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 export ANDROID_NDK=/home/manout/android-ndk-r16b
 export ANDROID_NDK_HOME=$ANDROID_NDK
-export PATH=$PATH:/snap/bin
-export PATH=$PATH:$ANDROID_NDK
 
