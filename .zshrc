@@ -160,6 +160,6 @@ export PYTHONPATH=$PYTHONPATH:/home/manout/caffe/pytho/n
 #[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 #[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
-export ANDROID_NDK=/home/manout/android-ndk-r16b
+export ANDROID_NDK=/home/manout/android-ndk-r15c
 export ANDROID_NDK_HOME=$ANDROID_NDK
 
