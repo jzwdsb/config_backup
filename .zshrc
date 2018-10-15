@@ -154,7 +154,7 @@ export PATH=$PATH:/snap/bin
 export PATH=$PATH:$ANDROID_NDK
 
 # add pycaffe to PYTHONPATH
-export PYTHONPATH=$PYTHONPATH:/home/manout/caffe/pytho/n
+export PYTHONPATH=$PYTHONPATH:/home/manout/caffe/python
 
 #export NVM_DIR="$HOME/.nvm"
 #[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
@@ -163,3 +163,8 @@ export PYTHONPATH=$PYTHONPATH:/home/manout/caffe/pytho/n
 export ANDROID_NDK=/home/manout/android-ndk-r15c
 export ANDROID_NDK_HOME=$ANDROID_NDK
 
+export PATH="/home/manout/.pyenv/bin:$PATH"
+eval "$(pyenv init -)"
+eval "$(pyenv virtualenv-init -)"
+
+export PATH=$PATH:/home/manout/bin
