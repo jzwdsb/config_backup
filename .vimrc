@@ -72,11 +72,9 @@ set incsearch
 set fenc=utf-8
 
 set encoding=utf-8
-set fileencodings=ucs-bom,utf8,cp936
 set termencoding=utf-8
+set fileencodings=utf-8,gb18030,gbk
 set fileencoding=utf-8
-
-set softtabstop=4
 
 set shortmess=atI
 
@@ -87,6 +85,8 @@ augroup END
 
 set tags=tags
 set autochdir
+set nobackup
+set nowritebackup
 
 " taglist 的设置
 let Tlist_Ctags_Cmd='/usr/bin/ctags'   
@@ -299,6 +299,8 @@ if !exists('g:loaded_matchit') && findfile('plugin/matchit.vim', &rtp) ==#  ''
 endif
 
 inoremap <C-U> <C-G>u<C-U>
+
+
 
 colorscheme  candy
 " vim:set ft=vim et sw=2:
