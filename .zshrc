@@ -66,7 +66,7 @@ source $ZSH/oh-my-zsh.sh
 if [[ -n $SSH_CONNECTION ]]; then
   export EDITOR='vim'
 else
-  export EDITOR='mvim'
+  export EDITOR='vim'
 fi
 
 # Compilation flags
@@ -132,10 +132,8 @@ alias ipython='ipython --pylab'
 alias ipython3='ipython3 --pylab'
 alias rm="trash-put -v"
 alias gcc='g++'
-alias blog_build='hexo clean && hexo g'
 alias blog_deploy='hexo clean && hexo g && hexo d'
 alias blog_commit='git add --all && git commit -m "$(date)" && git push origin master'
-
 
 export VIMRUNTIME=/usr/share/vim/vim74
 
@@ -168,3 +166,4 @@ eval "$(pyenv init -)"
 eval "$(pyenv virtualenv-init -)"
 
 export PATH=$PATH:/home/manout/bin
+
