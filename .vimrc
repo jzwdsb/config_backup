@@ -89,7 +89,7 @@ set tags=tags
 set autochdir
 
 " taglist 的设置
-let Tlist_Ctags_Cmd='/usr/bin/ctags'   
+let Tlist_Ctags_Cmd='/usr/local/bin/ctags'   
 let Tlist_Show_One_File=1
 let Tlist_OnlyWindow=1
 let Tlist_Use_Right_Window=0

@@ -1,8 +1,5 @@
-# If you come from bash you might have to change your $PATH.
-# export PATH=$HOME/bin:/usr/local/bin:$PATH
-
 # Path to your oh-my-zsh installation.
-  export ZSH=/Users/manout/.oh-my-zsh
+export ZSH=/Users/manout/.oh-my-zsh
 
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
@@ -17,28 +14,18 @@ ZSH_THEME="robbyrussell"
 # sensitive completion must be off. _ and - will be interchangeable.
 # HYPHEN_INSENSITIVE="true"
 
-# Uncomment the following line to disable bi-weekly auto-update checks.
-# DISABLE_AUTO_UPDATE="true"
-
 # Uncomment the following line to change how often to auto-update (in days).
 export UPDATE_ZSH_DAYS=30
-
-# Uncomment the following line to disable colors in ls.
-# DISABLE_LS_COLORS="true"
 
 # Uncomment the following line to disable auto-setting terminal title.
 DISABLE_AUTO_TITLE="true"
 
 # Uncomment the following line to enable command auto-correction.
-#ENABLE_CORRECTION="true"
+ENABLE_CORRECTION="true"
 
 # Uncomment the following line to display red dots whilst waiting for completion.
 COMPLETION_WAITING_DOTS="true"
 
-# Uncomment the following line if you want to disable marking untracked files
-# under VCS as dirty. This makes repository status check for large repositories
-# much, much faster.
-# DISABLE_UNTRACKED_FILES_DIRTY="true"
 
 # Uncomment the following line if you want to change the command execution time
 # stamp shown in the history command output.
@@ -52,16 +39,20 @@ COMPLETION_WAITING_DOTS="true"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git colored-man colorize pip python3 brew osx zsh-syntax-highlighting)
+plugins=(git colored-man colorize pip python3 
+		brew osx zsh-syntax-highlighting zsh-autosuggestion)
 
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
 
-# export MANPATH="/usr/local/man:$MANPATH"
+export MANPATH="/usr/local/man:$MANPATH"
 
 # You may need to manually set your language environment
 export LANG=zh_CN.UTF-8
+export PATH=$HOME/bin:/usr/local/bin:$PATH
+export PATH=$PATH:/usr/local/opt/go/libexec/bin
+export PATH=$PATH:$GOPATH/bin
 
 # Preferred editor for local and remote sessions
 if [[ -n $SSH_CONNECTION ]]; then
@@ -70,8 +61,35 @@ else
   export EDITOR='mvim'
 fi
 
+eval $(thefuck --alias cao )
+eval "$(pyenv init -)"
+
+# add zsh-syntax-highlighting
+source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+# add autojump
+source /usr/local/Cellar/autojump/22.5.1/share/autojump/autojump.zsh
+
+# env configuration
+
+# GO env
+export GOROOT=/usr/local/Cellar/go/1.11.4/libexec
+export GOPATH=/home/manout/go
+
+# nodejs env
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+[ -f /usr/local/etc/profile.d/autojump.sh ] && . /usr/local/etc/profile.d/autojump.sh
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
+export LDFLAGS="-L/usr/local/opt/qt/lib"
+export CPPFLAGS="-I/usr/local/opt/qt/include"
 
 # ssh
 export SSH_KEY_PATH="~/.ssh/rsa_id"
@@ -84,104 +102,19 @@ export SSH_KEY_PATH="~/.ssh/rsa_id"
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-export OPENCV_TEST_DATA_PATH=/home/manout/opencv_extra/testdata
-
-eval $(thefuck --alias cao )
-
-#alias sudo="sudo env PATH=$PATH"
-
-# add cuda nvcc path
-#export PATH=$PATH:/usr/local/cuda/bin/
-
-# add anaconda path
-#export PATH=$PATH:/home/manout/anaconda3/bin
-
-#add /home/manout/bin
-#export PATH=$PATH:/home/manout/bin
-# intel icc script path
-#export PATH=$PATH:/opt/intel/bin
-PATH=/usr/local/bin:$PATH
-
-export PATH="/usr/local/opt/python/libexec/bin:$PATH"
-
-export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/lib:/usr/local/lib
-# link mkl library, do not need now
-#export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/opt/intel/lib/intel64:/opt/intel/mkl/lib/intel64
-
-# after add /usr/libl/x86_64-linux-gnu to the LD_LIBRARY_PATH, anaconda-navigator crashs when every time start 
-#export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/lib/x86_64-linux-gnu
-
-
-# after add /home/manout/anaconda3/lib to LD_LIBRARY_PATH, ssh reports a warning message when execute
-#export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/home/manout/anaconda3/lib
-
-# add caffe to python package search path
-export PYTHONPATH=$PYTHONPATH:/Users/manout/caffe/python
-
-# add zsh-syntax-highlighting
-source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-
-# add rust
-#source $HOME/.cargo/env
-
-# add zsh plugin
-#source $ZSH/incr-0.2.zsh
-
-# add autojump
-source /usr/local/Cellar/autojump/22.5.1/share/autojump/autojump.zsh
-
-
-#export JAVA_HOME=/usr/lib/jvm/java-8-oracle/jre
-
-#export PATH=$PATH:$JAVA_HOME/bin
-
-#export CLASSPATH=$CLASSPATH:.
-
-# add antlr classpath
-#export CLASSPATH=$CLASSPATH:/usr/local/lib/antlr-4.7-complete.jar
-
-#export CLASSPATH=$CLASSPATH:/usr/share/java
-
-# personal alias
 alias cp='cp -iv'
 alias mv='mv -iv'
-alias rm='rm -vi'
+alias rm='rm -v'
 alias rmdir='rmdir -v'
 alias ln='ln -v'
-#alias chmod='chmod -c'
-alias chown='chown -c'
 alias mkdir='mkdir -v'
-#alias checkupdate='sudo apt update && apt list --upgradable'
 alias cmatrix='cmatrix -b'
-#alias anaconda-navigator="nohup anaconda-navigator 2> /dev/null &"
-#alias ddd='nohup  ddd 2> /dev/null &'
-#alias openfile='xdg-open'
 alias :q='echo "You are not in vim"'
-#alias gephi='nohup  $HOME/gephi-0.9.3-SNAPSHOT/bin/gephi 2> /dev/null &'
 alias ipython='ipython --pylab'
 alias ipython3='ipython3 --pylab'
-#alias rm="trash-put -v"
-#alias add-apt-proxy="cat /home/manout/.aptproxy | sudo tee /etc/apt/apt.conf"
 alias gcc='g++'
 alias blog_build='hexo clean && hexo g'
 alias blog_deploy='hexo clean && hexo g && hexo d'
 alias vim='mvim'
 alias blog_commit='git add --all && git commit -m "$(date)" && git push origin master'
 alias updatedb='/usr/libexec/locate.updatedb'
-
-#alias python3='/usr/local/bin/python'
-
-
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-#export PATH=$PATH:/Users/manout/android-ndk-r16b
-#export ANDROID_NDK="/Users/manout/android-ndk-r16b"
-VIRTUALENVWRAPPER_PYTHON=/usr/local/bin/python3
-export PATH="/usr/local/opt/sphinx-doc/bin:$PATH"
-export PATH="$PATH:/usr/local/opt/qt/bin"
-export LDFLAGS="-L/usr/local/opt/qt/lib"
-export CPPFLAGS="-I/usr/local/opt/qt/include"
-export PKG_CONFIG_PATH="/usr/local/opt/qt/lib/pkgconfig"
