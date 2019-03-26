@@ -43,6 +43,7 @@ export LANG=zh_CN.UTF-8
 export PATH=$GOPATH/bin:$PATH
 export PATH=/usr/local/bin:$PATH
 export PATH=$PATH:/usr/local/opt/go/libexec/bin
+export PATH=/usr/local/sbin:$PATH
 
 # Preferred editor for local and remote sessions
 if [[ -n $SSH_CONNECTION ]]; then
@@ -60,12 +61,15 @@ source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 # add autojump
 source /usr/local/Cellar/autojump/22.5.1/share/autojump/autojump.zsh
 
-
+# add env for hadoop and hive
+export HADOOP_HOME=/usr/local/Cellar/hadoop/3.1.1
+export HIVE_HOME=usr/local/Cellar/hive/3.1.1/libexec
 
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
 export LDFLAGS="-L/usr/local/opt/qt/lib"
 export CPPFLAGS="-I/usr/local/opt/qt/include"
+
 
 # ssh
 export SSH_KEY_PATH="~/.ssh/rsa_id"
@@ -85,4 +89,4 @@ alias blog_build='hexo clean && hexo g'
 alias blog_deploy='hexo clean && hexo g && hexo d'
 alias vim='mvim'
 alias blog_commit='git add --all && git commit -m "$(date)" && git push origin master'
-alias updatedb='sudo usr/libexec/locate.updatedb'
+alias updatedb='sudo /usr/libexec/locate.updatedb'
