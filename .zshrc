@@ -12,9 +12,7 @@ COMPLETION_WAITING_DOTS="true"
 
 HIST_STAMPS="mm/dd/yyyy"
 
-plugins=(git colored-man colorize pip python3 
-		brew osx zsh-syntax-highlighting zsh-autosuggestion
-		zsh-completions)
+plugins=(git colored-man-pages colorize pip python brew osx)
 
 source $ZSH/oh-my-zsh.sh
 source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
@@ -22,6 +20,7 @@ source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 export GOROOT=/usr/local/Cellar/go/1.11.4/libexec
 export GOPATH=/Users/manout/go
+export GO111MODULE=on
 
 # nodejs env
 export NVM_DIR="$HOME/.nvm"
@@ -75,7 +74,7 @@ export CPPFLAGS="-I/usr/local/opt/qt/include"
 export SSH_KEY_PATH="~/.ssh/rsa_id"
 
 # Set personal aliases
-alias cp='cp -iv'
+alias cp='cp -irv'
 alias mv='mv -iv'
 alias rm='rm -v'
 alias ln='ln -v'
